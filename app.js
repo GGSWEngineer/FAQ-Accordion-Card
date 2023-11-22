@@ -80,3 +80,23 @@ questions.forEach((question) => {
 });
 
 
+// Assuming 'myImage' is the image element you want to modify
+const myImage = document.querySelector('.woman-image');
+
+function updateImageSrc() {
+  if (window.innerWidth > 992) {
+    // Change the src when the window width is greater than 992px
+    myImage.src = 'images/illustration-woman-online-desktop.svg';
+  } else {
+    // Change the src for smaller window sizes
+    myImage.src = 'images/illustration-woman-online-mobile.svg';
+  }
+}
+
+// Call the function initially
+updateImageSrc();
+
+// Add a resize event listener to update the image src when the window is resized
+window.addEventListener('resize', updateImageSrc);
+
+

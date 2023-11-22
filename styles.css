@@ -16,6 +16,10 @@ main {
   min-height: 100vh;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .container {
   width: 327px;
   height: 535px;
@@ -33,6 +37,10 @@ main {
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-60%);
+}
+
+.box-image {
+  display: none;
 }
 
 .heading-with-arrow {
@@ -53,6 +61,8 @@ h1 {
   width: 8px;
   height: 4px;
   margin: 1.5rem 0;
+  stroke-width: 2px;
+  stroke: #f47b56;
 }
 
 /* option to make the cursor into pointer when it hovers over the .question div */
@@ -70,7 +80,8 @@ h1 {
 
 /* option to just make the h2 and arrow turn into a cursor when you hover */
 
-.question h2:hover, .question .arrow:hover {
+.question h2:hover,
+.question .arrow:hover {
   color: #f47b56;
   cursor: pointer;
 }
@@ -101,6 +112,7 @@ h1 {
     width: 920px;
     height: 509px;
     padding: 4.06rem 5.94rem 5.2rem 29.69rem;
+    overflow: hidden; /* Hide overflow */
   }
 
   .image {
@@ -109,6 +121,14 @@ h1 {
     left: 0;
     top: 50%;
     transform: translateY(-50%) translateX(-18%);
+  }
+
+  .wrapper .box-image {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    transform: translateY(-50%) translateX(-50%);
   }
 
   h1 {
