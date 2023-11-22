@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+  min-height: 100vh;
+}
+
+.container {
+  width: 327px;
+  height: 535px;
+  border-radius: 23px;
+  background: #fff;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.5);
+  padding: 8.25rem 1.5rem 3rem;
+  position: relative;
+}
+
+.image {
+  width: 237px;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+}
+
+.heading-with-arrow {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #1e1f36;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.38rem;
+}
+
+.arrow {
+  display: block;
+  width: 8px;
+  height: 4px;
+  margin: 1.5rem 0;
+}
+
+/* option to make the cursor into pointer when it hovers over the .question div */
+
+/* .question:hover {
+  cursor: pointer;
+} */
+
+.question h2 {
+  color: #4b4c5f;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  margin: 1.25rem 0 1.2rem 0;
+}
+
+/* option to just make the h2 and arrow turn into a cursor when you hover */
+
+.question h2:hover, .question .arrow:hover {
+  color: #f47b56;
+  cursor: pointer;
+}
+
+.question h2:hover {
+  color: #f47b56;
+}
+
+.question.active h2 {
+  color: #1e1f36;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.question.active p {
+  color: #787887;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem; /* 150% */
+}
+
+.answer {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 920px;
+    height: 509px;
+    padding: 4.06rem 5.94rem 5.2rem 29.69rem;
+  }
+
+  .image {
+    width: 472px;
+    height: 359px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-18%);
+  }
+
+  h1 {
+    margin-bottom: 2.69rem;
+    text-align: start;
+  }
+  .question h2 {
+    font-size: 0.875rem;
+  }
+
+  .question.active h2 {
+    font-size: 0.875rem;
+  }
+}
